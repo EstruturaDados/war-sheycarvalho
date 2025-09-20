@@ -96,3 +96,55 @@ int main() {
 
 // limparBufferEntrada():
 // Função utilitária para limpar o buffer de entrada do teclado (stdin), evitando problemas com leituras consecutivas de scanf e getchar.
+
+
+#include <stdio.h>
+#include <string.h>
+
+// Define a struct para representar um Território.
+// A struct armazena o nome do território, a cor do exército e a quantidade de tropas.
+typedef struct {
+    char nome[30];
+    char cor[10];
+    int tropas;
+} Territorio;
+
+int main() {
+    // Declara um vetor de 5 structs do tipo Territorio para armazenar os dados.
+    Territorio territorios[5];
+    int i;
+
+// --- Seção de Cadastro ---
+    printf("--- Cadastro de Territorios ---\n\n");
+    // Laço for para preencher os dados de 5 territórios.
+    for (i = 0; i < 5; i++) {
+        printf("Territorio %d:\n", i + 1);
+
+        // Solicita e lê o nome do território.
+        printf("  Digite o nome do territorio: ");
+        scanf(" %29[^\n]", territorios[i].nome);
+        
+        // Solicita e lê a cor do exercito.
+        printf("  Digite a cor do exercito (ex: Vermelho, Azul): ");
+        scanf(" %9[^\n]", territorios[i].cor);
+
+        // Solicita e lê a quantidade de tropas.
+        printf("  Digite a quantidade de tropas: ");
+        scanf("%d", &territorios[i].tropas);
+        
+        printf("\n");
+    }
+
+    // --- Seção de Exibição ---
+    printf("\n--- Dados dos Territorios Cadastrados ---\n\n");
+    // Laço for para percorrer o vetor e exibir os dados de cada território.
+    for (i = 0; i < 5; i++) {
+        printf("Territorio %d\n", i + 1);
+        printf("  Nome: %s\n", territorios[i].nome);
+        printf("  Cor: %s\n", territorios[i].cor);
+        printf("  Tropas: %d\n", territorios[i].tropas);
+        printf("\n");
+    }
+
+    return 0;
+}
