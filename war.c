@@ -100,7 +100,6 @@ int main() {
 // ============================================================================
 //         EXECUÇÃO DO EXERCÍCIO
 // ============================================================================
-//    
 
 #include <stdio.h>
 #include <string.h>
@@ -154,7 +153,8 @@ int main() {
 }
 
 // ============================================================================
-// ANÁLISE DO CÓDIGO E REQUISITOS:
+//         ANÁLISE DO CÓDIGO E REQUISITOS:
+// ============================================================================
 
 // - O código C acima cumpre todos os requisitos funcionais e não funcionais solicitados:
 // - Criação da struct: A struct Territorio foi definida com os campos nome, cor e tropas.
